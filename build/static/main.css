@@ -26,6 +26,12 @@ main a:hover{
 	margin: 0 auto;
 }
 
+@media screen and (max-width: 1000px) {
+  .container {
+     width: 90%;
+  }
+}
+
 header{
 	margin-top: 10%;
 	margin-bottom: 5%;
