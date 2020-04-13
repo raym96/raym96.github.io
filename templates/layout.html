@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163594486-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-163594486-1');
+	</script>
+
 	{% if title %}
 		<title>Raymond Ji - {{title}}</title>
 	{% else %}
@@ -17,11 +27,12 @@
 <body>
 	<div class="container">
 		<header>
-		<h1> Raymond Ji </h1>
-		<h2> New York, NY </h2>
+			<h1> Raymond Ji </h1>
+			<h2> New York, NY </h2>
 			<nav>
 				{% block nav %} {% endblock nav%}
 			</nav>
+
 		</header>
 
 		<main>
