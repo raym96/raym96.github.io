@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-	
-		<title>Raymond Ji - About</title>
-	
+	{% if title %}
+		<title>Raymond Ji - {{title}}</title>
+	{% else %}
+		<title>Raymond Ji</title>
+	{% endif %}
 
-	<link rel="stylesheet" href="/static/main.css">
-
-	<script src="/static/three.r95.min.js"></script>
-	<script src="/static/vanta.waves.min.js"></script>	
+	<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+	<!-- <link rel="stylesheet" href="{{ url_for('static', filename='font-awesome/css/font-awesome.min.css')}}"> -->
+	<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+	<script src="{{ url_for('static', filename='three.r95.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='vanta.waves.min.js') }}"></script>	
 	 
 </head>
 <body>
 	<div class="container">
-		
-	<nav>
+		<header>
 		<h1> Raymond Ji </h1>
-		<p> New York, NY </p>
-	</nav>
+		<h2> New York, NY </h2>
+			<nav>
+				{% block nav %} {% endblock nav%}
+			</nav>
+		</header>
 
+		<main>
+			{% block content %}{% endblock content%}
+		</main>
 	</div>
-
-
 	
-ABOUT ME
-
-
+	
 
 	<div id="vantajs"></div>
 	<script>
@@ -37,6 +41,7 @@ ABOUT ME
 		  minWidth: 200.00,
 		  scale: 1.00,
 		  scaleMobile: 1.00,
+		  //color: 0x21b,
 		  color: 0x171525,
 		  shininess: 11.00,
 		  waveHeight: 10.00,
