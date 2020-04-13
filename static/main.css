@@ -1,22 +1,73 @@
-* {
- font-size: 100%;
- font-family: Arial;
- color: #FFFFFF;
+:root{
+	--main-active-color: #832B34;
+	--link-color: #99CCFF;
 }
 
+
+* {
+ font-size: 105%;
+ font-family: Georgia, serif;
+ color: #FFFFFF;
+ text-align: justify;
+}
+
+
+main a{
+	text-decoration: none;
+}
+
+main a:hover{
+	color: var(--link-color);
+}
+
+
+.container {
+	width: 60%;
+	margin: 0 auto;
+}
+
+header{
+	margin-top: 10%;
+	margin-bottom: 5%;
+}
 h1 {
-	font-size: 140%;
+	font-family: Arial;
+	font-size: 200%;
 	margin-bottom: 3px;
 }
 
-/*html {
-	background: url(background.jpg);
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}*/
+h2 {
+	font-family: Arial;
+}
 
+nav{
+	margin-top: 2em;
+}
+
+nav a{
+	font-size: 80%;
+	padding: 1%;
+	text-decoration: none;
+	text-transform: uppercase;
+	border: 1px #FFFFFF solid;
+	border-radius: 5px;
+	margin-right: 1ch;
+}
+
+.active{
+	background-color: rgba(255, 0, 0, 0.4);
+}
+
+.icon{
+	display: inline-block;
+	font-size: 150px;
+	margin-right: 0.75em;
+}
+
+.icon:hover{
+	color: var(--main-active-color);
+	text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #FFF, 0 0 30px #FFF, 0 0 40px #FFF, 0 0 55px #FFF, 0 0 75px #FFF
+}
 
 #vantajs {
   width: 100%;
@@ -25,11 +76,4 @@ h1 {
   top:0px;
   left:0px;
   z-index:-1;
-}
-
-
-.container {
-	clear: both;
-	width: 50%;
-	margin: 0 auto;
 }
