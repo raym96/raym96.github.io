@@ -15,15 +15,17 @@ app.static_folder = 'static'
 @app.route('/')
 @app.route('/index.html')
 def home():
-    return render_template('index.html')
+    return render_template('index.html', title = 'About')
 
 @app.route('/experience.html')
 def about():
-    return render_template('experience.html', title = 'About')
+    return render_template('experience.html', title = 'Experience')
 
 @app.route('/portfolio.html')
 def portfolio():
     return render_template('portfolio.html', title = 'Portfolio')
+
+
 
 if __name__ == '__main__':
     app.run(debug = True)

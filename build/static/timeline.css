@@ -34,6 +34,8 @@
   height: 100%;
 }
 
+
+
 .timeline-event {
   position: relative;
 }
@@ -93,6 +95,8 @@
   height: 1.5em;
 }
 
+
+
 .timeline-event-thumbnail {
   -moz-transition: box-shadow 0.5s ease-in 0.1s;
   -o-transition: box-shadow 0.5s ease-in 0.1s;
@@ -105,10 +109,10 @@
   -webkit-box-shadow: inset 0 0 0 0em #ef795a;
   box-shadow: inset 0 0 0 0em #ef795a;
   display: inline-block;
-  margin-bottom: 1.2em;
+  margin-bottom: 1em;
   margin-top: 0.5em;
   font-size: 1em;
-  padding: 0.5em;
+  padding: 1em 0.5em 1em 0.5em;
 }
 
 
@@ -122,5 +126,7 @@ ul, ol{
   line-height: 2em;
 }
 
-
+.timeline p{
+  line-height: 0em;
+}
 
