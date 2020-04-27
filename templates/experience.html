@@ -9,7 +9,7 @@
 
 
 {% block content %}
-<div  ng-controller='ExperienceListController'>
+<div >
   <!-- Searchable Shopping List: -->
   <div id = "filter-bar">
 	  <label for="keyword">Search keyword:</label>
@@ -24,7 +24,7 @@
 	  <input type="checkbox" checked="checked" id="education" ng-model="education">
 	  </div>
   <ul class="timeline">
-    <li class = "timeline-event" ng-repeat="item in experienceList | filter: experienceFilter(keyword, fulltime, internship, project, education)" ng-mouseover = "adaptBackground(item.name)" ng-mouseleave="resetBackground()"> 
+    <li class = "timeline-event" ng-repeat="item in experienceList | filter: experienceFilter(keyword, fulltime, internship, project, education)" ng-mouseover = "setBackground(item.name)" ng-mouseleave="resetBackground()"> 
     	<label class="timeline-event-icon"></label>
     	<div class="timeline-event-copy">
     		<p class="timeline-event-thumbnail">{a item.time a}</p>

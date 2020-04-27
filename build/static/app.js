@@ -164,9 +164,7 @@ function ExperienceListController($scope) {
   	}
   }
 
-  	$scope.adaptBackground = function adaptBackground(element){
-		console.log(element);
-		// document.getElementById("my-background").style.backgroundImage = "{{ url_for('static', filename='profile.JPG') }}"; 
+  	$scope.setBackground = function adaptBackground(element){
 		document.getElementById("override").style.backgroundImage = "url(static/img/"+element+".jpg)";
 		document.getElementById("override").style.opacity = "100%";
 		document.getElementById("container").style.backgroundColor = "rgba(0, 0, 0, 0.7)";
@@ -182,6 +180,5 @@ function ExperienceListController($scope) {
 }
 
 })();
-
 
 
