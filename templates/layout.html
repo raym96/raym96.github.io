@@ -58,9 +58,20 @@
     	</footer>
 
 	</div>
+
+
+  	<div id="large-header" class="large-header">
+     	<canvas id="demo-canvas"></canvas>
+  	</div>
+	<script src="{{ url_for('static', filename='TweenLite.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='EasePack.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='demo.js') }}"></script>
+
+	<div id="override"></div>
+
     <!-- Background -->
-	<div id="my-background"></div>
-	<script>
+	<!-- <div id="my-background"></div> -->
+	<!-- <script>
 		VANTA.WAVES({
 		  el: "#my-background",
 		  mouseControls: true,
@@ -76,24 +87,6 @@
 		  waveSpeed: 0.60,
 		  zoom: 0.65
 		})
-	</script>
-	<div id="override"></div>
-
-	<!-- <script>
-	VANTA.FOG({
-	  el: "#vantajs",
-	  mouseControls: true,
-	  touchControls: true,
-	  minHeight: 200.00,
-	  minWidth: 200.00,
-	  highlightColor: 0xc0bbbb,
-	  midtoneColor: 0x6a6fd7,
-	  lowlightColor: 0x16007f,
-	  baseColor: 0x0,
-	  blurFactor: 0.65,
-	  speed: 0.80,
-	  zoom: 1.20
-	})
 	</script> -->
 </body>
 </html>
