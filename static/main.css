@@ -30,6 +30,7 @@ main a:hover{
 @media screen and (max-width: 1000px) {
   .container {
      width: 90%;
+     font-size: 2vw;
   }
 }
 
@@ -51,6 +52,14 @@ nav{
 	margin-top: 2em;
 }
 
+@keyframes glowing {
+  0% { box-shadow: 0 0 5px #FFFFFF; }
+  50% { box-shadow: 0 0 10px #FFFFFF; }
+  100% { box-shadow: 0 0 5px #FFFFFF; }
+  }
+
+
+
 nav a{
 	font-size: 80%;
 	padding: 1%;
@@ -58,17 +67,38 @@ nav a{
 	text-transform: uppercase;
 	border: 1px #FFFFFF solid;
 	border-radius: 5px;
-	margin-right: 1ch;
+	margin-right: 2ch;
+	animation: glowing 2s infinite;
 }
 
 .active{
 	background-color: rgba(255, 0, 0, 0.4);
+	border: 2px #FFFFFF solid;
+	animation: default;
+}
+
+
+@keyframes rotate {
+  100% 	{transform: rotate(360deg);}
+}
+
+@keyframes jump {
+  0%   {transform: translate3d(0,0,0);}
+  50%  {transform: translate3d(0,30%,0);}
+  100% {transform: translate3d(0,0,0);}
+}
+
+@keyframes jump {
+  0%   {transform: translate(0);}
+  50%  {transform: translate(0,8%) ;}
+  100% {transform: translate(0);}
 }
 
 .icon{
 	display: inline-block;
 	font-size: 150px;
-	margin-right: 0.75em;
+	margin-right: 1.5em;
+	animation:  jump 2s infinite;
 }
 
 .icon:hover{
@@ -94,6 +124,7 @@ footer {
     left: 0pt;
 
 }   
+
 
 
 #vantajs {

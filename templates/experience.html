@@ -9,61 +9,38 @@
 
 
 {% block content %}
-<ul class="timeline">
-	<li class="timeline-event">
-    <label class="timeline-event-icon"></label>
-    <div class="timeline-event-copy">
-      <p class="timeline-event-thumbnail">May 2020 - Present</p>
-      <h3>Associate Quantitative Analyst, Fixed Income</h3>
-      <h4>Morgan Stanley, NYC</h4>
-     
-    </div>
-  </li>
-  <li class="timeline-event">
-    <label class="timeline-event-icon"></label>
-    <div class="timeline-event-copy">
-      <p class="timeline-event-thumbnail">October 2019 - January 2020</p>
-      <h3>Fall Associate</h3>
-      <h4>Morgan Stanley, NYC</h4>
-      <ul>
-	      <li> Calibrated a double-exponential jump diffusion process on asset price dynamics using MLE methods</li>
-	      <li> Created a reverse repurchase agreement pricing model accounting for credit spread and Wrong Way Risk</li>
-	      <li> Designed an interactive dashboard for daily P&L tracking using JavaScript, HTML5 and CSS3</li>
-	      <li> Implemented an unsupervised record linkage algorithm to generate Machine Learning training dataset</li>
-  		</ul>
-  		<p><strong><u>Language</u></strong>: Python, Kdb+, HTML5/CSS3/Javascript</p>
-  		<p><strong><u>Skills</u></strong>: Optimization, Numerical Analysis, Machine Learning </p>
-    </div>
-  </li>
-  <li class="timeline-event">
-    <label class="timeline-event-icon"></label>
-    <div class="timeline-event-copy">
-      <p class="timeline-event-thumbnail">January 2018 - July 2018</p>
-      <h3>Junior Data Analyst</h3>
-      <h4>Amazon, Paris</h4>
-      <ul>
-      <li> Created procedures to improve pricing automation and competition monitoring.</li>
-      <li> Closely monitored the daily pricing procedure to ensure company policies are followed </li>
-      <li> Automated and managed countrywide pricing performance dashboards using SQL and VBA </li>
-  		</ul>	
-  		<p><strong><u>Language</u></strong>: Excel, VBA, Python</p>
-  		<p><strong><u>Skills</u></strong>: Data Analysis, Automation</p>
-    </div>
-  </li>
-  <li class="timeline-event">
-    <label class="timeline-event-icon"></label>
-    <div class="timeline-event-copy">
-      <p class="timeline-event-thumbnail">July 2017 - December 2017</p>
-      <h3>Intern, Equity Derivatives SalesTrading</h3>
-      <h4>Commerzbank, London</h4>
-      <ul>
-      <li> Conceived a structured product pricing interface using Excel VBA and C++</li>
-      <li> Priced a wide range of products such as Phoenix-Autocalls for institutional clients</li>
-      <li> Booked trades from Hong Kong, Korean and European offices on a daily basis </li>
-      <p><strong><u>Language</u></strong>: Excel, VBA</p>
-      <p><strong><u>Skills</u></strong>: Derivatives, Options pricing</p>
+<div  ng-controller='ExperienceListController'>
+  <!-- Searchable Shopping List: -->
+  <div id = "filter-bar">
+	  <label for="keyword">Search keyword:</label>
+	  <input type="text" id="keyword" placeholder="python, amazon" ng-model="keyword"><br>
+	  <label for="fulltime"> Full-time </label>
+	  <input type="checkbox" checked="checked" id="fulltime" ng-model="fulltime">
+	  <label for="internship"> Internship </label>
+	  <input type="checkbox" checked="checked" id="internship" ng-model="internship">
+	  <label for="project"> Project/Award </label>
+	  <input type="checkbox" checked="checked" id="project" ng-model="project">
+	  <label for="education"> Education </label>
+	  <input type="checkbox" checked="checked" id="education" ng-model="education">
+	  </div>
+  <ul class="timeline">
+    <li class = "timeline-event" ng-repeat="item in experienceList | filter: experienceFilter(keyword, fulltime, internship, project, education)"> 
+    	<label class="timeline-event-icon"></label>
+    	<div class="timeline-event-copy">
+    		<p class="timeline-event-thumbnail">{a item.time a}</p>
+    		<h3> {a item.title a}</h3>
+    		<h4> {a item.firm a}</h4>
+    		<ul ng-repeat="content in item.content">
+    			<li> {a content a}</li>
+    		</ul>
+    		<p ng-hide="item.empty_content"><strong><u>Language</u></strong>: {a item.languages a}</p>
+    		<p ng-hide="item.empty_content"><strong><u>Skills</u></strong>: {a item.skills a}</p>
+
+    	</div>
+    </li>
   </ul>
-    </div>
-  </li>
-</ul>
+</div>
 {% endblock content %}
+
+
+

@@ -18,7 +18,6 @@
 /* Styling */
 .timeline {
   margin: 0;
-  line-height: 1em;
   position: relative;
   max-width: 100%;
   font-size: 70%
@@ -35,9 +34,9 @@
 }
 
 
-
 .timeline-event {
   position: relative;
+
 }
 .timeline-event:hover .timeline-event-icon {
   -moz-transform: rotate(-45deg);
@@ -56,7 +55,7 @@
 }
 
 .timeline-event-copy {
-  padding: 2em;
+  padding: 2em 2em 0em;
   position: relative;
   top: -2em;
   left: 4em;
@@ -64,16 +63,19 @@
 }
 .timeline-event-copy h3 {
   font-size: 1.75em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 .timeline-event-copy h4 {
   font-size: 1.2em;
-  margin-bottom: 1.2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 .timeline-event-copy strong {
   font-weight: 700;
 }
 .timeline-event-copy p:not(.timeline-event-thumbnail) {
-  padding-bottom: 1.2em;
+  padding-bottom: 0.7em;
 }
 
 .timeline-event-icon {
@@ -128,5 +130,29 @@ ul, ol{
 
 .timeline p{
   line-height: 0em;
+}
+
+input {
+  color: black;
+  font-size: 90%;
+  padding: 2px;
+}
+input::placeholder{
+  font-style: italic;
+  opacity: 50%;
+}
+input[type=checkbox] {
+  margin-right: 2%;
+}
+
+#filter-bar{
+  margin:3% 0px;
+  border-top: 2px solid #FFFFFF;
+  border-bottom: 2px solid #FFFFFF;
+  padding: 1.5% 0px;
+}
+
+#filter-bar label{
+  font-size: 90%;
 }
 
