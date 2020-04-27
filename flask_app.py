@@ -26,6 +26,5 @@ def portfolio():
     return render_template('portfolio.html', title = 'Portfolio')
 
 
-
 if __name__ == '__main__':
     app.run(debug = True)

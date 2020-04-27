@@ -115,7 +115,6 @@ app.config(['$interpolateProvider', function($interpolateProvider) {
 		  $interpolateProvider.endSymbol('a}');
 		}]);
 
-
 ExperienceListController.$inject = ['$scope'];
 function ExperienceListController($scope) {
 	$scope.experienceList = experienceList;
@@ -180,5 +179,6 @@ function ExperienceListController($scope) {
 }
 
 })();
+
 
 
