@@ -37,7 +37,7 @@
 
 </head>
 <body>
-	<div class="container">
+	<div id="container">
 		<header>
 			<h1> Raymond Ji </h1>
 			<h2> New York, NY </h2>
@@ -65,7 +65,7 @@
 <a href="https://www.linkedin.com/in/raymond-ji/" alt="to my linkedin"><i class="fab fa-linkedin fa-2x icon"></i></a>
 <a href="https://github.com/raym96" alt="to my github"><i class="fab fa-github fa-2x icon"></i></a>
 Resume:  
-<a href="/static/resume.pdf"> <i class="fas fa-file-pdf fa-2x icon"></i></a>
+<a href="/static/resume.pdf" > <i class="fas fa-file-pdf fa-2x icon"  id="resume"></i></a>
 </p>
 
 
@@ -76,12 +76,12 @@ Resume:
     		This page was created by Raymond Ji - Copyright 2020
     	</footer>
 
-	
+	</div>
     <!-- Background -->
-	<div id="vantajs"></div>
+	<div id="my-background"></div>
 	<script>
 		VANTA.WAVES({
-		  el: "#vantajs",
+		  el: "#my-background",
 		  mouseControls: true,
 		  touchControls: true,
 		  minHeight: 200.00,
@@ -96,6 +96,7 @@ Resume:
 		  zoom: 0.65
 		})
 	</script>
+	<div id="override"></div>
 
 	<!-- <script>
 	VANTA.FOG({

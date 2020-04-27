@@ -6,6 +6,7 @@ Object.prototype.hasOwnProperty = function(property) {
 };
 
 var MS = {
+	name: "MorganStanley",
 	firm: "Morgan Stanley, NYC",
 	time: "October 2019 - January 2020",
 	title: "Internship: Fall Associate",
@@ -19,6 +20,7 @@ var MS = {
 }
 
 var Amazon = {
+	name: "Amazon",
 	firm: "Amazon, Paris",
 	time: "January 2018 - July 2018",
 	title: "Internship: Junior Data Analyst",
@@ -31,6 +33,7 @@ var Amazon = {
 }
 
 var Commerzbank = {
+	name: "Commerzbank",
 	firm: "Commerzbank, London",
 	time: "July 2017 - December 2017",
 	title: "Internship: Equity Derivatives SalesTrader",
@@ -43,6 +46,7 @@ var Commerzbank = {
 }
 
 var MS2 = {
+	name: "MorganStanley",
 	firm: "Morgan Stanley, NYC",
 	time: "May 2020 - Present",
 	title: "Associate Quantitative Strategist, Fixed Income",
@@ -52,6 +56,7 @@ var MS2 = {
 }
 
 var MFE = {
+	name: "MFE",
 	firm: "University of California at Berkeley",
 	time: "March 2019 - March 2020",
 	title: "Master of Financial Engineering",
@@ -60,6 +65,7 @@ var MFE = {
 }
 
 var Centrale = {
+	name: "Centrale",
 	firm: "CentraleSupélec (formerly Ecole Centrale Paris)",
 	time: "September 2015 - June 2019",
 	title: "Master of Science in Applied Mathematics",
@@ -68,6 +74,7 @@ var Centrale = {
 }
 
 var MICS = {
+	name: "MICS",
 	firm: "Research Laboratory MICS",
 	time: "September 2018 - March 2019",
 	title: "Project: Creation of a market sentiment indicator",
@@ -81,6 +88,7 @@ var MICS = {
 }
 
 var DataOpen = {
+	name: "DataOpen",
 	firm: "Citadel / Citadel Securities, Correlation One",
 	time: "January 2020",
 	title: "Award: Citadel West Coast Data Open, 1st Place",
@@ -155,7 +163,25 @@ function ExperienceListController($scope) {
   		return false
   	}
   }
+
+  	$scope.adaptBackground = function adaptBackground(element){
+		console.log(element);
+		// document.getElementById("my-background").style.backgroundImage = "{{ url_for('static', filename='profile.JPG') }}"; 
+		document.getElementById("override").style.backgroundImage = "url(static/img/"+element+".jpg)";
+		document.getElementById("override").style.opacity = "100%";
+		document.getElementById("container").style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+
+	}
+	$scope.resetBackground = function resetBackground(){
+		document.getElementById("override").style.opacity = "0%";
+		document.getElementById("container").style.backgroundColor = null;
+
+
+	}
+
 }
 
 })();
+
+
 

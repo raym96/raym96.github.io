@@ -22,20 +22,22 @@ main a:hover{
 }
 
 
-.container {
-	width: 60%;
+#container {
+	width: 70%;
 	margin: 0 auto;
+	padding: 3%;
+	transition: all 1.5s;
 }
 
 @media screen and (max-width: 1000px) {
-  .container {
+  #container {
      width: 90%;
      font-size: 2vw;
   }
 }
 
 header{
-	margin-top: 10%;
+	margin-top: 5%;
 	margin-bottom: 5%;
 }
 h1 {
@@ -54,7 +56,7 @@ nav{
 
 @keyframes glowing {
   0% { box-shadow: 0 0 5px #FFFFFF; }
-  50% { box-shadow: 0 0 10px #FFFFFF; }
+  50% { box-shadow: 0 0 20px #FFFFFF; }
   100% { box-shadow: 0 0 5px #FFFFFF; }
   }
 
@@ -69,6 +71,7 @@ nav a{
 	border-radius: 5px;
 	margin-right: 2ch;
 	animation: glowing 2s infinite;
+	background-color: #1D1B32
 }
 
 .active{
@@ -78,19 +81,21 @@ nav a{
 }
 
 
-@keyframes rotate {
-  100% 	{transform: rotate(360deg);}
-}
-
-@keyframes jump {
-  0%   {transform: translate3d(0,0,0);}
-  50%  {transform: translate3d(0,30%,0);}
-  100% {transform: translate3d(0,0,0);}
-}
 
 @keyframes jump {
   0%   {transform: translate(0);}
-  50%  {transform: translate(0,8%) ;}
+  50%  {transform: translate(0,10%) ;}
+  100% {transform: translate(0);}
+}
+
+
+@keyframes jump {
+  0%   {transform: translate(0);}
+  16.6%  {transform: translate(0,-40%) ;}
+  33.3%  {transform: translate(0,0%) ;}
+  50% {transform: translate(0,-20%) ;}
+  66.6% {transform: translate(0,0%) ;}
+  83.3%	{transform: translate(0,-10%) ;}
   100% {transform: translate(0);}
 }
 
@@ -98,12 +103,17 @@ nav a{
 	display: inline-block;
 	font-size: 150px;
 	margin-right: 1.5em;
-	animation:  jump 2s infinite;
+
 }
 
 .icon:hover{
 	color: var(--main-active-color);
 	text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #FFF, 0 0 30px #FFF, 0 0 40px #FFF, 0 0 55px #FFF, 0 0 75px #FFF
+}
+
+.icon[id="resume"]{
+	animation: jump 2s infinite;
+	animation-timing-function: ease-out;
 }
 
 #icon-bar{
@@ -125,16 +135,30 @@ footer {
 
 }   
 
-
-
-#vantajs {
+#my-background {
   width: 100%;
   height: 100%; 
   position: fixed;
   top:0px;
   left:0px;
-  z-index:-1;
+  z-index:-2;
 }
+
+#override{
+	background-image: white;
+	padding: 1%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+  height: 100%; 
+  position: fixed;
+  top:0px;
+  left:0px;
+  z-index:-1;
+  opacity: 0%;
+  transition: all 1.5s;
+}
+
 
 
 
