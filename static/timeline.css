@@ -20,7 +20,6 @@
   margin: 0;
   position: relative;
   max-width: 100%;
-  font-size: 70%
 }
 .timeline:before {
   background-color: white;
@@ -36,7 +35,7 @@
 
 .timeline-event {
   position: relative;
-
+  margin-right: 5%;
 }
 .timeline-event:hover .timeline-event-icon {
   -moz-transform: rotate(-45deg);
@@ -57,25 +56,32 @@
 .timeline-event-copy {
   padding: 2em 2em 0em;
   position: relative;
-  top: -2em;
-  left: 4em;
+  top: -1.75em;
+  left: 3em;
   width: 100%;
 }
 .timeline-event-copy h3 {
-  font-size: 1.75em;
+  font-size: 1.2em;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
 }
 .timeline-event-copy h4 {
-  font-size: 1.2em;
+  font-size: 1em;
   margin-top: 1em;
   margin-bottom: 1em;
 }
 .timeline-event-copy strong {
   font-weight: 700;
 }
-.timeline-event-copy p:not(.timeline-event-thumbnail) {
-  padding-bottom: 0.7em;
+
+.timeline-event-copy ul{
+  list-style: square;
+}
+.timeline-event-copy .reg{
+  font-size: 0.7em;
+  line-height: 2em;
+  margin: 0;
+  padding: 0;
 }
 
 .timeline-event-icon {
@@ -92,9 +98,9 @@
   margin: 0.5em 0.5em 0.5em -0.5em;
   position: absolute;
   top: 0;
-  left: 2em;
-  width: 1.5em;
-  height: 1.5em;
+  left: 1.95em;
+  width: 1.4em;
+  height: 1.4em;
 }
 
 
@@ -113,23 +119,14 @@
   display: inline-block;
   margin-bottom: 1em;
   margin-top: 0.5em;
-  font-size: 1em;
-  padding: 1em 0.5em 1em 0.5em;
+  font-size: 0.7em;
+  padding: 0.5em;
 }
 
 
 ul, ol{
   list-style: none;
-  margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;
-}
-
-.timeline ul{
-  list-style: square;
-  line-height: 2em;
-}
-
-.timeline p{
-  line-height: 0em;
+  margin:0;padding:0;border:0;font:inherit;vertical-align:baseline;
 }
 
 input {

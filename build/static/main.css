@@ -29,7 +29,7 @@ main a:hover{
 	transition: all 1.5s;
 	min-height: 100%;
 	position: absolute;
-	margin-left: auto;
+	margin-left: 10%;
 	margin-right: auto;
 	left: 0;
 	right: 0;
@@ -40,6 +40,7 @@ main a:hover{
   #container {
      width: 90%;
      font-size: 2vw;
+     margin-left: 1%;
   }
 }
 
@@ -49,7 +50,7 @@ header{
 }
 h1 {
 	font-family: Arial;
-	font-size: 200%;
+	font-size: 2em;
 	margin-bottom: 3px;
 }
 
@@ -72,7 +73,7 @@ nav{
 
 
 nav a{
-	font-size: 80%;
+	font-size: 0.8em;
 	padding: 1%;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -86,7 +87,7 @@ nav a{
 .active{
 	background-color: rgba(255, 0, 0, 0.4);
 	border: 2px #FFFFFF solid;
-	animation: default;
+	animation: none;
 }
 
 
@@ -110,7 +111,7 @@ nav a{
 
 .icon{
 	display: inline-block;
-	font-size: 150px;
+	font-size: 1.5em;
 	margin-right: 1.5em;
 
 }

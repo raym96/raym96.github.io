@@ -74,11 +74,11 @@
     		<p class="timeline-event-thumbnail">{a item.time a}</p>
     		<h3> {a item.title a}</h3>
     		<h4> {a item.firm a}</h4>
-    		<ul ng-repeat="content in item.content">
+    		<ul class="reg" ng-repeat="content in item.content">
     			<li> {a content a}</li>
     		</ul>
-    		<p ng-hide="item.empty_content"><strong><u>Language</u></strong>: {a item.languages a}</p>
-    		<p ng-hide="item.empty_content"><strong><u>Skills</u></strong>: {a item.skills a}</p>
+    		<p class="reg" ng-hide="item.empty_content"><strong><u>Language</u></strong>: {a item.languages a}</p>
+    		<p class="reg" ng-hide="item.empty_content"><strong><u>Skills</u></strong>: {a item.skills a}</p>
 
     	</div>
     </li>
