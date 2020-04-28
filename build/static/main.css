@@ -28,8 +28,12 @@ main a:hover{
 	padding: 3%;
 	transition: all 1.5s;
 	min-height: 100%;
-	display: flex;
-	flex-direction: column;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	text-align: center;
 }
 
 @media screen and (max-width: 1000px) {
@@ -56,6 +60,8 @@ h2 {
 nav{
 	margin-top: 1.5em;
 }
+
+
 
 @keyframes glowing {
   0% { box-shadow: 0 0 5px #FFFFFF; }
@@ -148,7 +154,7 @@ footer {
    background-size: cover;
    background-position: center center;
    background-image: url("space.jpg");
-   z-index: -2;
+   z-index: -99;
 }
 
 #override{
@@ -169,6 +175,16 @@ footer {
 }
 
 
-
+#fade{
+	position: fixed;
+   	min-width: 35%;
+   	height: 100%;
+   	right: 0px;
+   	top: 0px;
+	background-image: url("profile.png");
+	background-size: cover;
+	z-index:-98;
+	color: black;
+}
 
 
