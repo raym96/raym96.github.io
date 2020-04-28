@@ -36,13 +36,22 @@ main a:hover{
 	text-align: center;
 }
 
+@media screen and (max-width: 1500px) {
+  #container {
+     width: 80%;
+     font-size: 1.5vw;
+     margin-left: 5%;
+  };
+}
+
 @media screen and (max-width: 1000px) {
   #container {
      width: 90%;
      font-size: 2vw;
      margin-left: 1%;
-  }
+  };
 }
+
 
 header{
 	margin-top: 3%;
@@ -178,7 +187,7 @@ footer {
 
 #fade{
 	position: fixed;
-   	min-width: 45%;
+   	width: 45%;
    	height: 100%;
    	right: 0px;
    	top: 0px;
@@ -186,6 +195,13 @@ footer {
 	background-size: cover;
 	z-index:-98;
 	color: black;
+}
+
+@media screen and (max-width: 1000px) {
+  #fade {
+  	width: 500px;
+  	height: 800px;
+  };
 }
 
 
