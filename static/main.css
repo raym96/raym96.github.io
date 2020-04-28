@@ -199,8 +199,9 @@ footer {
 
 @media screen and (max-width: 1000px) {
   #fade {
-  	width: 600px;
-  	height: 900px;
+  	/*width: 600px;
+  	height: 900px;*/
+  	visibility: hidden;
   };
 }
 
