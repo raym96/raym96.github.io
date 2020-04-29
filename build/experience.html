@@ -56,8 +56,6 @@
 <div >
   <!-- Searchable Shopping List: -->
   <div id = "filter-bar">
-	  <label for="keyword">Search keyword:</label>
-	  <input type="text" id="keyword" placeholder="python" ng-model="keyword"><br>
 	  <label for="fulltime"> Full-time </label>
 	  <input type="checkbox" checked="checked" id="fulltime" ng-model="fulltime">
 	  <label for="internship"> Internship </label>
@@ -66,6 +64,10 @@
 	  <input type="checkbox" checked="checked" id="project" ng-model="project">
 	  <label for="education"> Education </label>
 	  <input type="checkbox" checked="checked" id="education" ng-model="education">
+    <br>
+    <label for="keyword">Search keyword:</label>
+    <input type="text" id="keyword" placeholder="python" ng-model="keyword">
+
 	  </div>
   <ul class="timeline">
     <li class = "timeline-event" ng-repeat="item in experienceList | filter: experienceFilter(keyword, fulltime, internship, project, education)" ng-mouseover = "setBackground(item.name)" ng-mouseleave="resetBackground()"> 
