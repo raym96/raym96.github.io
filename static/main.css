@@ -198,15 +198,15 @@ footer {
 	color: black;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-device-width: 1000px) {
   #fade {
   	width: 60%;
   };
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-device-width: 800px) {
   #fade {
-  	/*width: 600px;
+/*  	width: 600px;
   	height: 900px;*/
   	visibility: hidden;
   };
